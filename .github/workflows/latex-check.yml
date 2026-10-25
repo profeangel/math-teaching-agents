@@ -21,5 +21,5 @@ jobs:
 
       - name: Compile Minimal Dummy Evaluation
         run: |
-          sed 's/<<METADATA_TITLE>>/Evaluación de Prueba/g; s/<<TOTAL_POINTS>>/30/g; s/<<CONTENT_BODY>>/\\section*{Pregunta 1}\\\\ Resuelva $x^2 - 4 = 0$./g' templates/latex/standard-evaluation.tex > test_eval.tex
+          sed 's/<<METADATA_TITLE>>/Evaluación de Prueba/g; s/<<TOTAL_POINTS>>/30/g; s/<<CONTENT_BODY>>/\\section*{Question 1} Solve $x^2 - 4 = 0$./g' templates/latex/standard-evaluation.tex > test_eval.tex
           tectonic test_eval.tex
