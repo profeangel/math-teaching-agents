@@ -1,0 +1,33 @@
+name: Bug Report or Didactic Inconsistency
+description: Report a bug in schemas, agents, templates, or mathematical rigor.
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for helping us uphold mathematical and didactic rigor in this ecosystem.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      options:
+        - MTSK / GPK Agents
+        - Gatekeeper / Evaluator (Gate 1 or Gate 2)
+        - JSON Schemas
+        - Curriculum Adapters
+        - Theoretical Frameworks
+        - LaTeX / Typst / Word Templates
+        - CLI / Python Runtime Engine
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description of the Issue
+      placeholder: Describe what happened and why it violates formal mathematical or didactic standards...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: 1. Run command...

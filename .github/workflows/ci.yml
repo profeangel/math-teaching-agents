@@ -1,0 +1,44 @@
+name: CI Validation & Test Suite
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+          pip install pytest pytest-cov
+
+      - name: Validate Schemas, Curriculums & Frameworks via CLI
+        run: |
+          python -m math_teaching_agents.cli validate
+          python tools/validate.py --all
+
+      - name: Verify Tools Execution (Gate 1 CAS & Render)
+        run: |
+          python tools/verify_math.py examples/ecuacion-cuadratica/assessment-draft.yaml --json
+          python tools/render.py examples/ecuacion-cuadratica/assessment-draft.yaml --format moodle -o test.xml --json
+
+      - name: Run Pytest Suite
+        run: |
+          pytest

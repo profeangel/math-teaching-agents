@@ -1,0 +1,74 @@
+\documentclass[11pt,letterpaper]{article}
+
+% --- Paquetes Esenciales de Matemática y Tipografía ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{geometry}
+\geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{tasks}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+% --- Paleta de Colores Académica Neutra ---
+\definecolor{primaryDark}{RGB}{30, 41, 59}
+\definecolor{accentBlue}{RGB}{37, 99, 235}
+\definecolor{neutralGray}{RGB}{241, 245, 249}
+
+% --- Configuración de Encabezados y Pies ---
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.6pt}
+\fancyhead[L]{\small\textbf{\textsf{DEPARTAMENTO DE MATEMÁTICA}}}
+\fancyhead[R]{\small\textsf{\today}}
+\fancyfoot[C]{\small\thepage}
+
+% --- Cajas Didácticas ---
+\newtcolorbox{cajainstruccion}{
+  colback=neutralGray,
+  colframe=primaryDark,
+  arc=3mm,
+  boxrule=0.8pt,
+  fonttitle=\bfseries\sffamily,
+  coltitle=white,
+  colbacktitle=primaryDark,
+  title=Instrucciones Generales
+}
+
+\newtcolorbox{cajaejemplo}[1]{
+  colback=white,
+  colframe=accentBlue,
+  arc=2mm,
+  boxrule=1pt,
+  fonttitle=\bfseries\sffamily,
+  title=#1
+}
+
+\begin{document}
+
+% --- Membrete Estándar Institucional ---
+\noindent
+\begin{tabularx}{\textwidth}{|X|l|l|}
+\hline
+\textbf{Estudiante:} & \textbf{Curso:} & \textbf{Fecha:} \\
+\hline
+\textbf{Evaluación:} <<METADATA_TITLE>> & \textbf{Puntaje Total:} <<TOTAL_POINTS>> pts & \textbf{Nota:} \\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{cajainstruccion}
+Lea atentamente cada situación problema. Justifique formalmente sus procedimientos matemáticos. En los ítems de selección múltiple, marque únicamente la opción correcta.
+\end{cajainstruccion}
+
+\vspace{0.4cm}
+
+% --- Cuerpo Generado Dinámicamente por el Formatter ---
+<<CONTENT_BODY>>
+
+\end{document}

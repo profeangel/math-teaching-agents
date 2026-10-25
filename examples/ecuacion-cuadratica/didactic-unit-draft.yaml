@@ -1,0 +1,64 @@
+metadata:
+  unit_title: "Modelización y Raíces de Funciones Cuadráticas"
+  target_grade: "2° Medio / Grado 10"
+  topic: "Ecuaciones Cuadráticas y Parábolas en Contextos de Lanzamiento de Proyectiles"
+  estimated_sessions: 4
+  minutes_per_session: 90
+  curriculum_expectation_ref: "Bases Curriculares Mineduc - OA 04 / SEP NEM Fase 6"
+
+theoretical_alignment:
+  active_frameworks:
+    - "brousseau-tds"
+    - "duval-trrs"
+  networking_justification: >
+    Articulación metodológica entre la Teoría de Situaciones Didácticas (Brousseau) para la gestión
+    del medio a-didáctico y los Registros de Representación Semiótica (Duval) para la conversión entre
+    registro gráfico, algebraico y tabular.
+
+epistemological_diagnostics:
+  target_misconceptions:
+    - code: "CONFUSION_VERTICE_CON_RAIZ"
+      description: "El estudiante asume que el tiempo en que el proyectil toca el suelo ($h=0$) coincide con la altura máxima."
+      confrontation_strategy: "Contrastar con simulador GeoGebra la simetría de la parábola respecto al eje vertical del vértice."
+    - code: "SIGNO_MENOS_CUADRATICO"
+      description: "Al evaluar $-5t^2$ para $t=2$, calcula $(-5 \\cdot 2)^2 = 100$ en lugar de $-5 \\cdot 4 = -20$."
+      confrontation_strategy: "Uso de paréntesis explícitos y discusión de la jerarquía de operaciones de potencias frente al producto."
+  prerequisites_required:
+    - "Resolución de ecuaciones de primer grado"
+    - "Concepto de función y evaluación de imágenes numéricas"
+    - "Teorema de Pitágoras y plano cartesiano"
+
+phases:
+  - phase_id: 1
+    phase_name: "Situación de Acción: Lanzamiento Experimental e Indagación"
+    cognitive_demand: "HACIENDO_MATEMATICA"
+    example_choice_rationale: "Se escoge la función $h(t) = -5t^2 + 20t$ porque sus raíces ($0$ y $4$) y vértice ($t=2, h=20$) son enteros fácilmente manipulables."
+    teacher_role: "Presenta el problema del proyectil sin enunciar fórmulas de vértice ni factorización. Devuelve las preguntas al medio experimental."
+    student_activity: "En parejas, tabulan tiempos y alturas buscando deducir cuándo el objeto deja de subir y cuándo impacta el suelo."
+    udl_guidelines:
+      representation: "Gráfica interactiva animada y tabla numérica comparativa."
+      action_expression: "Construcción libre de tablas, bosquejos o diagramas de dispersión."
+      engagement: "Desafío gamificado de predicción del tiempo de vuelo."
+    dynamic_artifact_ref: "geogebra-projectile-motion-applet"
+
+  - phase_id: 2
+    phase_name: "Situación de Formulación y Validación: Conjetura de Simetría"
+    cognitive_demand: "PROCEDIMIENTOS_CON_CONEXIONES"
+    example_choice_rationale: "Comparación entre $t=1$ ($h=15$) y $t=3$ ($h=15$) para evidenciar la simetría axial respecto a $t=2$."
+    teacher_role: "Media el debate plenario sin validar directamente; solicita a los grupos defender por qué las alturas son idénticas a distancias iguales del vértice."
+    student_activity: "Los equipos formulan la conjetura de que el punto máximo ocurre exactamente en el punto medio entre el despegue y el impacto."
+    udl_guidelines:
+      representation: "Trazado del eje de simetría sobre la parábola."
+      action_expression: "Debate guiado y registro en pizarra compartida."
+      engagement: "Colaboración estructurada con roles rotativos."
+
+  - phase_id: 3
+    phase_name: "Institucionalización y Formalización Deductiva"
+    cognitive_demand: "PROCEDIMIENTOS_CON_CONEXIONES"
+    example_choice_rationale: "Generalización a $f(x) = ax^2 + bx + c$ deduciendo la abscisa del vértice $x_v = -b/(2a)$."
+    teacher_role: "Formaliza el estatus del saber matemático institucional, conecta la conjetura de los estudiantes con la completación de cuadrados."
+    student_activity: "Registran la síntesis conceptual y aplican la relación formal a nuevos casos paramétricos."
+    udl_guidelines:
+      representation: "Mapa conceptual síntesis que vincula registro gráfico, analítico y canónico."
+      action_expression: "Bitácora reflexiva de aprendizaje y formulario de síntesis."
+      engagement: "Autoevaluación de metacognición con rúbrica Förster."

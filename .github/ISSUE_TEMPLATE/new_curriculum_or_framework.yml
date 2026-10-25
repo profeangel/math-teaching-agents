@@ -1,0 +1,27 @@
+name: Proposal for New Theoretical Framework or Curriculum
+description: Propose adding a new didactic framework or national/regional curriculum adapter.
+labels: ["enhancement", "didactics"]
+body:
+  - type: dropdown
+    id: contribution_type
+    attributes:
+      label: Proposal Type
+      options:
+        - New National or Regional Curriculum Adapter
+        - New Didactic Research Framework
+    validations:
+      required: true
+  - type: input
+    id: entity_or_theory_name
+    attributes:
+      label: Name of Curriculum or Theoretical Framework
+      placeholder: E.g., US Common Core State Standards (CCSS) or Ethnomathematics
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Academic Literature Citations or Official Decrees
+      placeholder: Cite authors, publication years, policy documents, or statutory curriculum guidelines...
+    validations:
+      required: true

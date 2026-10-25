@@ -1,0 +1,59 @@
+---
+description: Didactic and typographic rules for generating and editing materials
+globs: ["**/*.tex", "**/*.typ", "**/*.md", "**/*.yaml", "templates/**/*", "agents/**/*", "schemas/**/*"]
+---
+
+# Didactic and Typographic Guidelines
+
+When designing or editing learning situations, lesson guides, or assessments in this project:
+
+0. **Teacher Intake Interview Protocol**:
+   - Before generating any material, verify whether the prompt or `.math-agent.yaml` defines: (1) School / Institution, (2) Grade Level, (3) Mathematical Strand, (4) Concrete Topic, and (5) Desired Didactic Framework (TDS, EOS, APOS, TRRS, RME, or Pragmatic).
+   - If missing, conduct the intake inquiry before starting generation.
+
+1. **Didactic and Epistemological Rigor**:
+   - Consult `frameworks/brousseau-tsd.yaml`: structure classroom activities into Action, Formulation, Validation, and Institutionalization.
+   - Consult `frameworks/duval-trrs.yaml`: enforce active coordination of at least 2 semiotic representation registers (algebraic, graphical, tabular, verbal).
+   - Consult `frameworks/dubinsky-apoe.yaml`: classify target conception level (Action, Process, Object, Schema).
+   - Consult `curriculums/` to align with official curriculum standards.
+
+2. **Zero Hallucination in Assessments**:
+   - Never invent arbitrary distractors. For multiple-choice questions, calculate distractors grounded in genuine cognitive misconceptions (linearity illusion, missing cross-terms, etc.) using:
+     ```bash
+     python tools/verify_math.py drafts/my_assessment.yaml --json
+     ```
+
+3. **Typographic Integrity and Compilation**:
+   - Every Typst document (`.typ`) must validate and compile cleanly with:
+     ```bash
+     python tools/render.py drafts/my_assessment.yaml --format typst --compile --json
+     ```
+   - Prioritize Typst over LaTeX for ultra-fast (100 ms) PDF builds without TeX Live overhead.
+
+<example>
+# Multiple-Choice Item with Genuine Epistemological Distractors & Multi-Register Coordination:
+stem: "Consider the graph of the parabola with vertex at (2, -1) passing through (0, 3). Which is the vertex form of f(x)?"
+options:
+  - id: "A"
+    text: "f(x) = (x - 2)^2 - 1"  # Correct key
+  - id: "B"
+    text: "f(x) = (x + 2)^2 - 1"  # Distractor: Sign reversal in horizontal translation
+  - id: "C"
+    text: "f(x) = (x - 1)^2 + 2"  # Distractor: Inversion of vertex coordinates (h, k)
+  - id: "D"
+    text: "f(x) = x^2 - 4x + 3"   # Monoregister expanded polynomial, not vertex form
+</example>
+
+<example type="invalid">
+# Antipattern: Arbitrary distractors lacking cognitive basis or multi-register linkage:
+stem: "Solve x^2 - 4 = 0"
+options:
+  - id: "A"
+    text: "x = 2"
+  - id: "B"
+    text: "x = 99"  # Random made-up number
+  - id: "C"
+    text: "x = 42"  # Meaningless distractor
+  - id: "D"
+    text: "x = -7"  # Random numeric option
+</example>

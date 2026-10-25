@@ -1,0 +1,36 @@
+id: "duval-trrs"
+nombre: "Teoría de Registros de Representación Semiótica (TRRS)"
+autor_principal: "Raymond Duval (1995, 1999)"
+paradigma_epistemologico: "Semiótica cognitiva: no hay noesis (comprensión conceptual) sin semiosis (representación)"
+
+kflm_cognitive_model:
+  premisa_central: "Los objetos matemáticos no son accesibles directamente por los sentidos; solo podemos acceder a ellos a través de sus representaciones semióticas. Confundir el objeto con una de sus representaciones es la principal fuente de error en matemática."
+  mecanismo_aprendizaje: "Coordinación mental activa y flexible entre al menos dos sistemas de representación distintos."
+  foco_obstaculos:
+    - "Monorregistro: confinamiento del pensamiento en un único registro (ej. solo el algebraico)."
+    - "No congruencia en la conversión: dificultad cuando las unidades semióticas de un registro no se corresponden punto a punto con las del otro registro."
+
+kmt_instructional_design:
+  registros_canonicos:
+    - "Registro Lenguaje Natural / Coloquial"
+    - "Registro Simbólico / Numérico / Algebraico"
+    - "Registro Gráfico Cartesiano"
+    - "Registro Tabular"
+    - "Registro Geométrico / Figurado"
+  operaciones_mentales_obligatorias:
+    - operacion: "Tratamiento"
+      definicion: "Transformación de una representación dentro del mismo registro semiótico (ej. factorizar un polinomio, simplificar una fracción)."
+    - operacion: "Conversión"
+      definicion: "Transformación de una representación de un registro a otro diferente, conservando el mismo objeto matemático (ej. de la gráfica de una parábola a su forma canónica)."
+  reglas_de_tarea:
+    - "La actividad debe forzar conversiones en ambos sentidos (A -> B y B -> A)."
+    - "Se deben priorizar conversiones no congruentes para evaluar la verdadera comprensión profunda."
+
+audit_checklist_gate_1:
+  - "Verificar que el material involucre al menos 2 registros semióticos explícitos."
+  - "Comprobar que existan preguntas específicas de conversión y no únicamente de tratamiento algorítmico interno."
+  - "Verificar que la redacción diferencie nítidamente el objeto matemático de su signo o gráfica."
+
+networking:
+  compatible_with: ["brousseau-tsd", "dubinsky-apoe", "freudenthal-rme"]
+  incompatible_with: ["reduccionismo_algebraico_ciego"]

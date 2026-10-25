@@ -1,0 +1,68 @@
+id: "mexico-nem"
+country_or_entity: "México - Secretaría de Educación Pública (SEP) / Nueva Escuela Mexicana (NEM)"
+language: "es-MX"
+version: "Plan de Estudio para la Educación Preescolar, Primaria y Secundaria 2022 / MCCEMS 2023"
+
+thesaurus_mappings:
+  grade_levels:
+    "fase_6_1_sec": "Fase 6 - 1° de Secundaria (12-13 años)"
+    "fase_6_2_sec": "Fase 6 - 2° de Secundaria (13-14 años)"
+    "fase_6_3_sec": "Fase 6 - 3° de Secundaria (14-15 años)"
+    "mccems_sem_1_2": "Media Superior - 1° y 2° Semestre (Pensamiento Matemático I y II)"
+    "mccems_sem_3_4": "Media Superior - 3° y 4° Semestre (Pensamiento Matemático III y IV)"
+    "mccems_sem_5_6": "Media Superior - 5° y 6° Semestre (Áreas de Profundización / Cálculo y Probabilidad)"
+  mathematical_domains:
+    numbers: "Sentido numérico, operaciones y sus relaciones inversas"
+    algebra: "Regularidades, patrones, álgebra y variación"
+    geometry: "Formas geométricas, espacio y medida"
+    statistics_probability: "Interpretación de la información y azar (Probabilidad y Estadística)"
+
+curricular_units_nomenclature:
+  field_keyword: "Campo Formativo: Saberes y Pensamiento Científico"
+  content_keyword: "Contenido Integrador"
+  pda_keyword: "Proceso de Desarrollo de Aprendizaje (PDA)"
+  axis_keyword: "Ejes Articuladores"
+
+articulatory_axes:
+  - id: "PENSAMIENTO_CRITICO"
+    name: "Pensamiento Crítico"
+  - id: "INTERCULTURALIDAD_CRITICA"
+    name: "Interculturalidad Crítica"
+  - id: "INCLUSION"
+    name: "Inclusión"
+  - id: "IGUALDAD_GENERO"
+    name: "Igualdad de Género"
+  - id: "VIDA_SALUDABLE"
+    name: "Vida Saludable"
+  - id: "APROPIACION_CULTURAS"
+    name: "Apropiación de las culturas a través de la lectura y la escritura"
+  - id: "ARTES_EXPERIENCIAS_ESTETICAS"
+    name: "Artes y experiencias estéticas"
+
+ministerial_skills:
+  - id: "MODELACION_FENOMENOS"
+    name: "Modelación matemática de fenómenos naturales y problemáticas comunitarias"
+  - id: "ARGUMENTACION_EXPLICACION"
+    name: "Argumentación, conjetura y contrastación de hipótesis y resultados"
+  - id: "LENGUAJE_FORMAL_COTIDIANO"
+    name: "Tránsito fluido entre el lenguaje cotidiano y el lenguaje científico-matemático"
+  - id: "RESOLUCION_SITUACIONES_PROBLEMA"
+    name: "Resolución de situaciones problema contextualizadas en la comunidad"
+
+standardized_testing:
+  active_tests:
+    - id: "MEJOREDU"
+      name: "Evaluación Diagnóstica Integral de las y los Alumnos de Educación Básica (MEJOREDU)"
+      focus: "Diagnóstico formativo de unidades de análisis en sentido numérico, forma, espacio y manejo de información."
+    - id: "EXANI_I_II"
+      name: "Exámenes Nacionales de Ingreso (CENEVAL EXANI-I y EXANI-II)"
+      focus: "Pensamiento matemático, razonamiento analítico y resolución de problemas para ingreso a bachillerato y universidad."
+    - id: "COMIPEMS"
+      name: "Concurso de Asignación a la Educación Media Superior (Zona Metropolitana CdMx)"
+      focus: "Habilidad matemática y conocimientos disciplinarios de secundaria."
+
+assessment_scales:
+  standard_score_max: 10.0
+  standard_score_min: 5.0
+  passing_grade: 6.0
+  passing_grade_ratio: 0.60

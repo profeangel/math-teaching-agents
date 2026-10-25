@@ -1,0 +1,39 @@
+# Comandos GeoGebra Script para Indagación Dinámica
+# Tema: Exploración de traslaciones y concavidad en f(x) = a(x - h)^2 + k
+# Generado por subagente geogebra-desmos-engineer
+
+# 1. Creación de Deslizadores Didácticos
+a = Deslizador(-4, 4, 0.2, 1, 150, false, true, false, false)
+h = Deslizador(-8, 8, 0.5, 1, 150, false, true, false, false)
+k = Deslizador(-8, 8, 0.5, 1, 150, false, true, false, false)
+
+FijarValor(a, 1)
+FijarValor(h, 3)
+FijarValor(k, -1)
+
+# 2. Función Cuadrática en Forma Canónica
+f(x) = a * (x - h)^2 + k
+ConfigurarColor(f, "Azul")
+FijarGrosorTrazo(f, 3)
+
+# 3. Puntos Notables y Elementos Geométricos
+V = (h, k)
+ConfigurarColor(V, "Rojo")
+FijarTamanoPunto(V, 5)
+FijarEstiloPunto(V, 0)
+FijarRotulo(V, "Vértice (h, k)")
+MuestraRotulo(V, true)
+
+EjeSimetria = Recta(V, (h, k + 1))
+ConfigurarColor(EjeSimetria, "Gris")
+FijarEstiloTrazo(EjeSimetria, 2)
+FijarRotulo(EjeSimetria, "Eje de Simetría: x = h")
+MuestraRotulo(EjeSimetria, true)
+
+Raices = {Interseccion(f, EjeX)}
+ConfigurarColor(Raices, "VerdeOscuro")
+FijarTamanoPunto(Raices, 4)
+
+# 4. Preguntas de Reflexión Integradas (Génesis Instrumental)
+# - ¿Qué condición debe cumplir el deslizador 'k' respecto al signo de 'a' para que existan dos raíces reales distintas?
+# - Varía 'h': ¿cambia la forma de la parábola o únicamente su posición en el plano cartesiano?

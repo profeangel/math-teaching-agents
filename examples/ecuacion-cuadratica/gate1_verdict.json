@@ -1,0 +1,61 @@
+{
+  "gate": 1,
+  "status": "APPROVED",
+  "score_total": 98,
+  "curriculum_validated": "chile-mineduc",
+  "active_theoretical_lenses": ["duval-trrs", "brousseau-tsd"],
+  "symbolic_engine_validation": {
+    "engine": "SymPy 1.14.0",
+    "status": "PASS",
+    "verified_items": [
+      {
+        "item_id": 1,
+        "distractors_unique": true,
+        "roots_satisfied": true,
+        "true_roots": ["2", "4"]
+      },
+      {
+        "item_id": 2,
+        "distractors_unique": true,
+        "vertex_time_satisfied": true,
+        "true_vertex_t": ["2"]
+      }
+    ]
+  },
+  "dimensions": {
+    "mathematical_rigor": {
+      "status": "PASS",
+      "observations": [
+        "Definición explícita de conjuntos numéricos (R vs C) requerida en el ítem 3.",
+        "Restricción t >= 0 explícita en el contexto físico de trayectoria."
+      ]
+    },
+    "curricular_alignment": {
+      "status": "PASS",
+      "observations": [
+        "Alineado con Bases Curriculares Mineduc 2° Medio y temario DEMRE PAES M1/M2 (Eje Álgebra y Funciones)."
+      ]
+    },
+    "epistemological_coherence": {
+      "status": "PASS",
+      "observations": [
+        "Cumple con TRRS de Duval al articular registro algebraico (fórmula/raíces), gráfico (parábola e intersecciones) y físico/contextual."
+      ]
+    },
+    "cognitive_obstacles_treatment": {
+      "status": "PASS",
+      "observations": [
+        "Distractor 1B: Refleja el error documentado de signo en factorizaciones (x-2)(x-4) -> x=-2,-4.",
+        "Distractor 2B: Diagnostica confusión cognitiva habitual entre t de altura máxima (vértice) y t de impacto en el suelo (raíz)."
+      ]
+    },
+    "assessment_quality": {
+      "status": "PASS",
+      "observations": [
+        "Rúbrica analítica en ítem 3 contiene descriptores empíricos graduados (Förster/Brookhart) sin adjetivos subjetivos."
+      ]
+    }
+  },
+  "required_actions": [],
+  "proceed_to_gate_2": true
+}

@@ -1,0 +1,35 @@
+id: "dubinsky-apoe"
+nombre: "Teoría APOE (Acción, Proceso, Objeto, Esquema)"
+autor_principal: "Ed Dubinsky y Grupo RUMEC (Arnon et al., 2014)"
+paradigma_epistemologico: "Constructivismo genético piagetiano aplicado a la educación matemática superior y escolar"
+
+kflm_cognitive_model:
+  premisa_central: "El conocimiento matemático consiste en la tendencia del individuo a responder a situaciones matemáticas reflexionando sobre ellas en un contexto social y construyendo o reconstruyendo acciones, procesos y objetos, organizándolos en esquemas."
+  mecanismo_aprendizaje: "Interiorización, Coordinación, Encapsulamiento y Desencapsulamiento."
+  foco_obstaculos:
+    - "Dificultad para interiorizar acciones externas en procesos mentales."
+    - "Incapacidad para encapsular un proceso dinámico en una totalidad estática (objeto mental)."
+
+kmt_instructional_design:
+  estructura_genetica:
+    - etapa: "Acción"
+      definicion: "Transformación de objetos percibida como externa; el estudiante requiere instrucciones paso a paso o algoritmos rígidos."
+    - etapa: "Proceso"
+      definicion: "La acción se interioriza; el estudiante puede prever el resultado, omitir pasos intermedios y revertir operaciones mentalmente."
+    - etapa: "Objeto"
+      definicion: "El proceso se encapsula; el estudiante concibe la noción como una totalidad sobre la cual se pueden aplicar nuevas acciones o transformaciones (ej. operar con funciones)."
+    - etapa: "Esquema"
+      definicion: "Colección coherente de acciones, procesos, objetos y otros esquemas vinculados para abordar una familia de problemas."
+  ciclo_de_ensenanza_ace:
+    - "Actividades de laboratorio / exploración mental (A)"
+    - "Discusión en clase y teorización (C)"
+    - "Ejercicios de consolidación y aplicación (E)"
+
+audit_checklist_gate_1:
+  - "Verificar que la secuencia explicite la Descomposición Genética (DG) del concepto a enseñar."
+  - "Comprobar que las tareas guíen deliberadamente al estudiante desde la fase de Acción hacia el Encapsulamiento como Objeto."
+  - "Evaluar si se plantean tareas que traten al concepto como un insumo de un nuevo proceso (prueba de encapsulamiento)."
+
+networking:
+  compatible_with: ["duval-trrs", "sfard-reification"]
+  incompatible_with: ["conductismo_asociacionista"]

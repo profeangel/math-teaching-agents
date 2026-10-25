@@ -1,0 +1,57 @@
+id: "godino-eos"
+nombre: "Enfoque Ontosemiótico del Conocimiento y la Instrucción Matemáticos (EOS)"
+autor_principal: "Juan Díaz Godino, Carmen Batanero y Vicenç Font (Universidad de Granada / Univ. de Barcelona)"
+paradigma_epistemologico: "Pragmático, antropológico y semiótico: la matemática como actividad humana orientada a la resolución de problemas y la construcción compartida de significados."
+
+kflm_cognitive_model:
+  premisa_central: "El significado de un objeto matemático emerge del sistema de prácticas operativas y discursivas que una persona (significado personal) o una institución (significado institucional) realiza para resolver un campo de problemas. Cuando existe divergencia entre ambos surge un 'conflicto semiótico'."
+  mecanismo_aprendizaje: "Apropiación progresiva de las configuraciones epistémicas institucionales mediante la articulación de prácticas ostensivas, discursivas y normativas."
+  foco_obstaculos:
+    - "Conflictos semióticos epistémicos: ambigüedades, incoherencias o lagunas en la presentación institucional del contenido."
+    - "Conflictos semióticos cognitivos: discrepancias entre las interpretaciones personales de los alumnos y los significados institucionales de referencia."
+    - "Conflictos semióticos interaccionales: malentendidos derivados de la interacción comunicativa entre profesor, estudiantes y recursos didácticos."
+
+kmt_instructional_design:
+  configuracion_ontosemiotica:
+    entidades_primarias:
+      - tipo: "Situaciones-problema"
+        descripcion: "Tareas, aplicaciones, ejercicios o enigmas que originan la actividad matemática."
+      - tipo: "Lenguajes"
+        descripcion: "Términos, expresiones, notaciones, gráficos y registros semióticos empleados ostensivamente."
+      - tipo: "Conceptos-definiciones"
+        descripcion: "Entidades matemáticas introducidas mediante definiciones implícitas o explícitas."
+      - tipo: "Proposiciones-propiedades"
+        descripcion: "Enunciados sobre relaciones entre conceptos, teoremas, identidades o fórmulas."
+      - tipo: "Procedimientos-algoritmos"
+        descripcion: "Operaciones, técnicas de cálculo, algoritmos y secuencias de pasos operativos."
+      - tipo: "Argumentos"
+        descripcion: "Explicaciones, justificaciones, deducciones o demostraciones que validan proposiciones o procedimientos."
+  dimensiones_dualidad:
+    - "Ostensivo vs. No ostensivo (Signos materiales y perceptibles frente a conceptos y procesos mentales)"
+    - "Extensivo vs. Intensivo (Casos particulares o ejemplificaciones frente a reglas o entidades genéricas)"
+    - "Unitario vs. Sistémico (El objeto considerado como una unidad global frente a la articulación de sus partes)"
+    - "Personal vs. Institucional (Significados generados por el aprendiz frente a los aceptados por la comunidad científica)"
+    - "Expresión vs. Contenido (El significante semiótico frente a su referente o significado pretendido)"
+  criterios_idoneidad_didactica:
+    - idoneidad: "Epistémica"
+      descripcion: "Representatividad y riqueza matemática de los significados institucionales enseñados."
+    - idoneidad: "Cognitiva"
+      descripcion: "Proximidad de los significados pretendidos a la zona de desarrollo próximo de los alumnos."
+    - idoneidad: "Interaccional"
+      descripcion: "Gestión dialógica, formulación de preguntas y resolución de conflictos semióticos en el aula."
+    - idoneidad: "Mediacional"
+      descripcion: "Adecuación y optimización del tiempo y de los recursos materiales y tecnológicos (CAS, GeoGebra)."
+    - idoneidad: "Afectiva"
+      descripcion: "Motivación, implicación, interés y actitudes positivas hacia las matemáticas."
+    - idoneidad: "Ecológica"
+      descripcion: "Alineación con el currículo oficial, el entorno sociocultural y las directrices pedagógicas."
+
+audit_checklist_gate_1:
+  - "Comprobar que la configuración epistémica contenga los 6 objetos primarios de forma articulada (situación, lenguajes, conceptos, proposiciones, procedimientos y argumentos)."
+  - "Verificar que el diseño prevea y diagnostique explícitamente los posibles conflictos semióticos en la interpretación de los enunciados y distractores."
+  - "Comprobar que la tarea no confunda el plano ostensivo (signos/notación) con el objeto matemático de fondo (dualidad ostensivo-no ostensivo)."
+  - "Evaluar la idoneidad epistémica del ítem verificando que no presente simplificaciones espurias ni errores conceptuales."
+
+networking:
+  compatible_with: ["duval-trrs", "brousseau-tsd", "dubinsky-apoe", "mtsk"]
+  incompatible_with: ["mecanicismo_algoritmico_descontextualizado"]

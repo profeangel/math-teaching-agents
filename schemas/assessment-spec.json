@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://math-teaching-agents.org/schemas/assessment-spec.json",
+  "title": "AssessmentSpecification",
+  "description": "Contrato semántico universal para instrumentos de evaluación diagnóstica, formativa y sumativa en educación matemática.",
+  "type": "object",
+  "required": [
+    "metadata",
+    "specification_table",
+    "items"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["title", "assessment_type", "target_grade", "total_points"],
+      "properties": {
+        "title": { "type": "string" },
+        "assessment_type": { 
+          "type": "string", 
+          "enum": ["DIAGNOSTICA", "FORMATIVA", "SUMATIVA", "AUTOEVALUACION", "COEVALUACION"] 
+        },
+        "modality": {
+          "type": "string",
+          "enum": ["INDIVIDUAL", "PAREJAS", "GRUPAL", "COLABORATIVA_ESTRUCTURADA"],
+          "default": "INDIVIDUAL"
+        },
+        "target_grade": { "type": "string" },
+        "curriculum_code": { "type": "string" },
+        "total_points": { "type": "number", "minimum": 1 },
+        "passing_threshold_percentage": { "type": "number", "minimum": 0, "maximum": 100, "default": 60 },
+        "estimated_duration_minutes": { "type": "integer", "minimum": 5 }
+      }
+    },
+    "specification_table": {
+      "type": "object",
+      "description": "Matriz taxonómica de alineamiento constructivo (Anderson & Krathwohl, 2001 / Carla Förster).",
+      "required": ["cognitive_process_distribution", "knowledge_type_distribution"],
+      "properties": {
+        "cognitive_process_distribution": {
+          "type": "object",
+          "properties": {
+            "recordar": { "type": "number" },
+            "comprender": { "type": "number" },
+            "aplicar": { "type": "number" },
+            "analizar": { "type": "number" },
+            "evaluar": { "type": "number" },
+            "crear": { "type": "number" }
+          }
+        },
+        "knowledge_type_distribution": {
+          "type": "object",
+          "properties": {
+            "factual": { "type": "number" },
+            "conceptual": { "type": "number" },
+            "procedural": { "type": "number" },
+            "metacognitivo": { "type": "number" }
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "item_id",
+          "format",
+          "bloom_anderson_level",
+          "mtsk_subdomain",
+          "points",
+          "stem"
+        ],
+        "properties": {
+          "item_id": { "type": "integer" },
+          "format": {
+            "type": "string",
+            "enum": ["MULTIPLE_CHOICE", "OPEN_DEVELOPMENT", "TRUE_FALSE_JUSTIFIED", "PROOF_ARGUMENT", "EXIT_TICKET_PROMPT"]
+          },
+          "bloom_anderson_level": {
+            "type": "string",
+            "enum": [
+              "RECORDAR_FACTUAL", "RECORDAR_CONCEPTUAL",
+              "COMPRENDER_CONCEPTUAL", "COMPRENDER_PROCEDURAL",
+              "APLICAR_PROCEDURAL", "APLICAR_CONCEPTUAL",
+              "ANALIZAR_CONCEPTUAL", "ANALIZAR_PROCEDURAL",
+              "EVALUAR_CONCEPTUAL", "EVALUAR_METACOGNITIVO",
+              "CREAR_PROCEDURAL", "CREAR_METACOGNITIVO"
+            ]
+          },
+          "mtsk_subdomain": {
+            "type": "string",
+            "enum": ["KoT", "KSM", "KPM", "KFLM", "KMT", "KMLS"]
+          },
+          "points": { "type": "number", "minimum": 1 },
+          "stem": { "type": "string", "description": "Enunciado del problema con soporte LaTeX ($...$)" },
+          "context_real_world": { "type": "string" },
+          "options": {
+            "type": "array",
+            "description": "Opciones de selección múltiple (obligatorio si format=MULTIPLE_CHOICE)",
+            "items": {
+              "type": "object",
+              "required": ["key", "text", "is_correct"],
+              "properties": {
+                "key": { "type": "string", "enum": ["A", "B", "C", "D", "E"] },
+                "text": { "type": "string" },
+                "is_correct": { "type": "boolean" },
+                "misconception_ref": { 
+                  "type": "string", 
+                  "description": "Código o descripción del obstáculo epistemológico o error sistemático (KFLM / Radatz) si is_correct=false" 
+                },
+                "feedback_clue": { "type": "string" }
+              }
+            }
+          },
+          "rubric": {
+            "type": "object",
+            "description": "Rúbrica analítica cualitativa para preguntas abiertas (Susan Brookhart / Carla Förster)",
+            "properties": {
+              "criterion_name": { "type": "string" },
+              "levels": {
+                "type": "object",
+                "required": ["avanzado", "competente", "en_desarrollo", "inicial"],
+                "properties": {
+                  "avanzado": { "type": "string", "description": "Descriptor empírico observable del desempeño óptimo" },
+                  "competente": { "type": "string", "description": "Descriptor empírico de desempeño esperado básico" },
+                  "en_desarrollo": { "type": "string", "description": "Descriptor empírico con errores procedimentales menores" },
+                  "inicial": { "type": "string", "description": "Descriptor empírico con incomprensión de base o ausencia de justificación" }
+                }
+              }
+            }
+          },
+          "expected_space_lines": { "type": "integer", "default": 4 }
+        }
+      }
+    }
+  }
+}

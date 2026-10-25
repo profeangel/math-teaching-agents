@@ -1,0 +1,90 @@
+metadata:
+  title: "Evaluación Formativa: Función y Ecuación Cuadrática en Contexto"
+  assessment_type: "FORMATIVA"
+  modality: "INDIVIDUAL"
+  target_grade: "2° Medio / Grado 10"
+  curriculum_code: "chile-mineduc"
+  total_points: 12
+  passing_threshold_percentage: 60
+  estimated_duration_minutes: 45
+
+specification_table:
+  cognitive_process_distribution:
+    comprender: 30
+    aplicar: 40
+    analizar: 30
+  knowledge_type_distribution:
+    conceptual: 40
+    procedural: 40
+    metacognitivo: 20
+
+items:
+  - item_id: 1
+    format: "MULTIPLE_CHOICE"
+    bloom_anderson_level: "APLICAR_PROCEDURAL"
+    mtsk_subdomain: "KoT"
+    points: 3
+    stem: "Considere la ecuación cuadrática $x^2 - 6x + 8 = 0$. ¿Cuál es el conjunto solución en $\\mathbb{R}$?"
+    math_verification:
+      type: "equation_roots"
+      equation: "x^2 - 6*x + 8 = 0"
+      expected_solution: "2"
+      variable: "x"
+    options:
+      - key: "A"
+        text: "$x = 2$ y $x = 4$"
+        is_correct: true
+      - key: "B"
+        text: "$x = -2$ y $x = -4$"
+        is_correct: false
+        misconception_ref: "SIGNO_FACTORIZACION_INVERSO: Inversión de signos al deducir raíces desde factores (x-2)(x-4)."
+      - key: "C"
+        text: "$x = 1$ y $x = 8$"
+        is_correct: false
+        misconception_ref: "FACTORIZACION_INCOMPLETA: Multiplican 8 pero su suma no es -6."
+      - key: "D"
+        text: "$x = 3$ y $x = -3$"
+        is_correct: false
+        misconception_ref: "CONFUSION_DIFERENCIA_CUADRADOS: Confusión con binomio suma por diferencia."
+
+  - item_id: 2
+    format: "MULTIPLE_CHOICE"
+    bloom_anderson_level: "ANALIZAR_CONCEPTUAL"
+    mtsk_subdomain: "KFLM"
+    points: 4
+    stem: "La trayectoria de un proyectil lanzado verticalmente está modelada por la función $h(t) = -5t^2 + 20t$, donde $h$ es la altura en metros y $t$ el tiempo en segundos ($t \\geq 0$). ¿En qué instante $t$ el proyectil alcanza su altura máxima?"
+    math_verification:
+      type: "equation_roots"
+      equation: "-10*t + 20 = 0"
+      expected_solution: "2"
+      variable: "t"
+    options:
+      - key: "A"
+        text: "$t = 2$ segundos"
+        is_correct: true
+      - key: "B"
+        text: "$t = 4$ segundos"
+        is_correct: false
+        misconception_ref: "CONFUSION_VERTICE_CON_RAIZ: Confunde el tiempo de caída al suelo con el vértice."
+      - key: "C"
+        text: "$t = 20$ segundos"
+        is_correct: false
+        misconception_ref: "VALOR_COEFICIENTE_LINEAL: Selecciona el parámetro lineal directamente."
+      - key: "D"
+        text: "$t = 5$ segundos"
+        is_correct: false
+        misconception_ref: "VALOR_COEFICIENTE_CUADRATICO: Confusión con la aceleración."
+
+  - item_id: 3
+    format: "OPEN_DEVELOPMENT"
+    bloom_anderson_level: "EVALUAR_CONCEPTUAL"
+    mtsk_subdomain: "KPM"
+    points: 5
+    stem: "Un estudiante afirma que 'si el discriminante $\\Delta = b^2 - 4ac$ de una ecuación cuadrática es estrictamente negativo, la ecuación no tiene solución'. Demuestre o refute dicha afirmación especificando con rigor los conjuntos numéricos (conjunto $\\mathbb{R}$ vs. $\\mathbb{C}$) y su interpretación geométrica en el plano cartesiano."
+    rubric:
+      criterion_name: "Precisión en dominios numéricos y registros semióticos de Duval (gráfico y algebraico)"
+      levels:
+        avanzado: "Aclara explícitamente que no existen soluciones reales (la parábola no interseca el eje X), pero sí existen dos soluciones complejas conjugadas en C."
+        competente: "Identifica la ausencia de raíces reales e intersecciones con el eje X, pero no profundiza en el cuerpo de los números complejos."
+        en_desarrollo: "Señala que la parábola no toca el eje horizontal pero confunde discriminante negativo con solución nula."
+        inicial: "Afirma únicamente que la raíz cuadrada da error matemático sin justificación axiomática ni geométrica."

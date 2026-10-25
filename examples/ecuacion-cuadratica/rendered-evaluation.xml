@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <!-- Categoría de Importación en el Banco de Preguntas -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Evaluación Formativa: Función y Ecuación Cuadrática en Contexto (2° Medio / Grado 10)</text>
+    </category>
+  </question>
+
+  <!-- Pregunta de Selección Múltiple -->
+  <question type="multichoice">
+    <name><text>Ítem 1 [KoT-APLICAR_PROCEDURAL]: Considere la ecuación cuadrática x^2 - 6x + 8 = 0....</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Considere la ecuación cuadrática \(x^2 - 6x + 8 = 0\). ¿Cuál es el conjunto solución en \(\mathbb{R}\)?</p>]]></text>
+    </questiontext>
+    <defaultgrade>3</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>x = 2 y x = 4</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p></p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>x = -2 y x = -4</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p> [Diagnóstico didáctico: SIGNO_FACTORIZACION_INVERSO: Inversión de signos al deducir raíces desde factores (x-2)(x-4).]</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>x = 1 y x = 8</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p> [Diagnóstico didáctico: FACTORIZACION_INCOMPLETA: Multiplican 8 pero su suma no es -6.]</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>x = 3 y x = -3</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p> [Diagnóstico didáctico: CONFUSION_DIFERENCIA_CUADRADOS: Confusión con binomio suma por diferencia.]</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta de Selección Múltiple -->
+  <question type="multichoice">
+    <name><text>Ítem 2 [KFLM-ANALIZAR_CONCEPTUAL]: La trayectoria de un proyectil lanzado verticalmen...</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>La trayectoria de un proyectil lanzado verticalmente está modelada por la función \(h(t) = -5t^2 + 20t\), donde \(h\) es la altura en metros y \(t\) el tiempo en segundos (\(t \geq 0\)). ¿En qué instante \(t\) el proyectil alcanza su altura máxima?</p>]]></text>
+    </questiontext>
+    <defaultgrade>4</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>t = 2 segundos</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p></p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>t = 4 segundos</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p> [Diagnóstico didáctico: CONFUSION_VERTICE_CON_RAIZ: Confunde el tiempo de caída al suelo con el vértice.]</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>t = 20 segundos</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p> [Diagnóstico didáctico: VALOR_COEFICIENTE_LINEAL: Selecciona el parámetro lineal directamente.]</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>t = 5 segundos</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p> [Diagnóstico didáctico: VALOR_COEFICIENTE_CUADRATICO: Confusión con la aceleración.]</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta de Desarrollo / Demostración Abierta -->
+  <question type="essay">
+    <name><text>Ítem 3 [KPM-EVALUAR_CONCEPTUAL]: Un estudiante afirma que 'si el discriminante Delt...</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un estudiante afirma que 'si el discriminante \(\Delta = b^2 - 4ac\) de una ecuación cuadrática es estrictamente negativo, la ecuación no tiene solución'. Demuestre o refute dicha afirmación especificando con rigor los conjuntos numéricos (conjunto \(\mathbb{R}\) vs. \(\mathbb{C}\)) y su interpretación geométrica en el plano cartesiano.</p>]]></text>
+    </questiontext>
+    <defaultgrade>5</defaultgrade>
+    <responseformat>editor</responseformat>
+    <responserequired>1</responserequired>
+    <responsefieldlines>15</responsefieldlines>
+    <graderinfo format="html">
+      <text><![CDATA[<h4>Rúbrica de Corrección: Precisión en dominios numéricos y registros semióticos de Duval (gráfico y algebraico)</h4><ul><li><strong>Avanzado:</strong> Aclara explícitamente que no existen soluciones reales (la parábola no interseca el eje X), pero sí existen dos soluciones complejas conjugadas en C.</li><li><strong>Competente:</strong> Identifica la ausencia de raíces reales e intersecciones con el eje X, pero no profundiza en el cuerpo de los números complejos.</li><li><strong>En_desarrollo:</strong> Señala que la parábola no toca el eje horizontal pero confunde discriminante negativo con solución nula.</li><li><strong>Inicial:</strong> Afirma únicamente que la raíz cuadrada da error matemático sin justificación axiomática ni geométrica.</li></ul>]]></text>
+    </graderinfo>
+  </question>
+
+</quiz>

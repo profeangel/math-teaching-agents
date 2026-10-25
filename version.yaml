@@ -1,0 +1,25 @@
+version: "0.8.0"
+release_date: "2026-10-24"
+codename: "Synthesis"
+description: "Neural-Symbolic Multi-Agent Framework for Didactic Design, Formal Verification, and Mathematics Pedagogy"
+spec_version: "0.8.0"
+architecture:
+  orchestration: "pedagogical-orchestrator"
+  quality_gate_1: "Formal Deterministic Gate (SymPy CAS, Geometric & Probability Invariants, Draft 2020-12)"
+  quality_gate_2: "Technical & Typesetting Gate (Typst Engine 100ms, LaTeX, Moodle XML)"
+  pedagogical_eval: "Semantic LLM-as-a-Judge (Brousseau, Duval, Bloom, Förster)"
+  human_in_the_loop: "Zero-Trust Human Review Checkpoint"
+  disciplinar_cluster: "MTSK (KoT, KSM, KPM, KFLM, KMT, KMLS)"
+  pedagogical_cluster: "GPK (Assessment, Teaching Standards, Learning Theories)"
+  dynamic_tools: "GeoGebra, Desmos, Manim CE, Web Widgets"
+  canonical_skills:
+    - "math-didactic-unit"
+    - "math-assessment"
+    - "math-dynamic-visualizer"
+components_count:
+  agents: 16
+  skills: 3
+  schemas: 2
+  frameworks: 4
+  curriculums: 5
+  tests: 76

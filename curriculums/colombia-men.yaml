@@ -1,0 +1,58 @@
+id: "colombia-men"
+country_or_entity: "Colombia - Ministerio de Educación Nacional (MEN) & ICFES"
+language: "es-CO"
+version: "Estándares Básicos de Competencias (EBCM) / Derechos Básicos de Aprendizaje (DBA V2)"
+
+thesaurus_mappings:
+  grade_levels:
+    "grado_6_7": "Grados 6° a 7° (Básica Secundaria - Ciclo 3)"
+    "grado_8_9": "Grados 8° a 9° (Básica Secundaria - Ciclo 4)"
+    "grado_10": "Grado 10° (Educación Media)"
+    "grado_11": "Grado 11° (Educación Media - Pruebas Saber 11)"
+  mathematical_domains:
+    numbers: "Pensamiento Numérico y Sistemas Numéricos"
+    algebra: "Pensamiento Variacional y Sistemas Algebraicos y Analíticos"
+    geometry: "Pensamiento Espacial y Sistemas Geométricos"
+    measurement: "Pensamiento Métrico y Sistemas de Medidas"
+    statistics_probability: "Pensamiento Aleatorio y Sistemas de Datos"
+
+curricular_units_nomenclature:
+  standard_keyword: "Estándar Básico de Competencia (EBC)"
+  dba_keyword: "Derecho Básico de Aprendizaje (DBA)"
+  evidence_keyword: "Evidencia de Aprendizaje"
+  competence_keyword: "Competencia ICFES"
+
+ministerial_skills:
+  - id: "FORMULAR_RESOLVER_PROBLEMAS"
+    code: "FRP"
+    name: "Formular y resolver problemas"
+  - id: "MODELAR"
+    code: "MOD"
+    name: "Modelar procesos y fenómenos de la realidad"
+  - id: "COMUNICAR"
+    code: "COM"
+    name: "Comunicar y expresar ideas matemáticas"
+  - id: "RAZONAR"
+    code: "RAZ"
+    name: "Razonar, conjeturar y demostrar"
+  - id: "FORMULAR_EJERCITAR_PROCEDIMIENTOS"
+    code: "FEP"
+    name: "Formular, comparar y ejercitar procedimientos y algoritmos"
+
+standardized_testing:
+  active_tests:
+    - id: "SABER_11"
+      name: "Prueba de Estado Saber 11° (Módulo de Matemáticas / Razonamiento Cuantitativo)"
+      focus: "Competencias: Interpretación y representación, Formulación y ejecución, Argumentación. Contextos familiar, laboral, comunitario y divulgación científica."
+    - id: "SABER_PRO"
+      name: "Prueba Saber Pro (Módulo Genérico de Razonamiento Cuantitativo)"
+      focus: "Competencias cuantitativas de egreso en educación superior universitaria y tecnológica."
+    - id: "SABER_3_5_9"
+      name: "Pruebas de la Calidad de la Educación Básica Saber 3°, 5° y 9°"
+      focus: "Seguimiento longitudinal a la adquisición de estándares básicos por ciclos escolares."
+
+assessment_scales:
+  standard_score_max: 5.0
+  standard_score_min: 1.0
+  passing_grade: 3.0
+  passing_grade_ratio: 0.60

@@ -1,0 +1,27 @@
+# Ejemplo de Reactivo de Evaluación conforme a schemas/assessment-spec.json
+title: "Mini-Evaluación Formativa: Raíces de Ecuación Cuadrática"
+target_level: "secondary"
+items:
+  - id: "item-01"
+    bloom_level: "analyze"
+    stem: "Dada la ecuación cuadrática x^2 - 5x + 6 = 0, ¿cuáles son sus soluciones reales?"
+    options:
+      - id: "A"
+        text: "x = 2 o x = 3"
+        is_correct: true
+        feedback: "Correcto. (x - 2)(x - 3) = 0."
+      - id: "B"
+        text: "x = -2 o x = -3"
+        is_correct: false
+        cognitive_error: "Inversión de signos en el despeje de factores"
+        feedback: "Error en el signo: al factorizar (x - 2)(x - 3) = 0, se cumple x - 2 = 0 => x = 2."
+      - id: "C"
+        text: "x = 1 o x = 6"
+        is_correct: false
+        cognitive_error: "Búsqueda errónea de factores del producto sin sumar el término lineal"
+        feedback: "Aunque 1 * 6 = 6, la suma 1 + 6 = 7, no 5."
+      - id: "D"
+        text: "x = 5 o x = 6"
+        is_correct: false
+        cognitive_error: "Uso directo de los coeficientes de la ecuación"
+        feedback: "Los coeficientes no corresponden directamente a las raíces."

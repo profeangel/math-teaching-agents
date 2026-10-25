@@ -1,0 +1,107 @@
+\documentclass[11pt,letterpaper]{article}
+
+% --- Paquetes Esenciales de Matemática y Tipografía ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{geometry}
+\geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{tasks}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+% --- Paleta de Colores Académica Neutra ---
+\definecolor{primaryDark}{RGB}{30, 41, 59}
+\definecolor{accentBlue}{RGB}{37, 99, 235}
+\definecolor{neutralGray}{RGB}{241, 245, 249}
+
+% --- Configuración de Encabezados y Pies ---
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.6pt}
+\fancyhead[L]{\small\textbf{\textsf{DEPARTAMENTO DE MATEMÁTICA}}}
+\fancyhead[R]{\small\textsf{\today}}
+\fancyfoot[C]{\small\thepage}
+
+% --- Cajas Didácticas ---
+\newtcolorbox{cajainstruccion}{
+  colback=neutralGray,
+  colframe=primaryDark,
+  arc=3mm,
+  boxrule=0.8pt,
+  fonttitle=\bfseries\sffamily,
+  coltitle=white,
+  colbacktitle=primaryDark,
+  title=Instrucciones Generales
+}
+
+\newtcolorbox{cajaejemplo}[1]{
+  colback=white,
+  colframe=accentBlue,
+  arc=2mm,
+  boxrule=1pt,
+  fonttitle=\bfseries\sffamily,
+  title=#1
+}
+
+\begin{document}
+
+% --- Membrete Estándar Institucional ---
+\noindent
+\begin{tabularx}{\textwidth}{|X|l|l|}
+\hline
+\textbf{Estudiante:} & \textbf{Curso:} & \textbf{Fecha:} \\
+\hline
+\textbf{Evaluación:} Evaluación Formativa: Función y Ecuación Cuadrática en Contexto & \textbf{Puntaje Total:} 12 pts & \textbf{Nota:} \\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{cajainstruccion}
+Lea atentamente cada situación problema. Justifique formalmente sus procedimientos matemáticos. En los ítems de selección múltiple, marque únicamente la opción correcta.
+\end{cajainstruccion}
+
+\vspace{0.4cm}
+
+% --- Cuerpo Generado Dinámicamente por el Formatter ---
+\noindent \textbf{Ítem 1} (3 pts)\\
+Considere la ecuación cuadrática $x^2 - 6x + 8 = 0$. ¿Cuál es el conjunto solución en $\mathbb{R}$?
+
+\begin{tasks}(2)
+  \task \textbf{A)} x = 2 y x = 4
+  \task \textbf{B)} x = -2 y x = -4
+  \task \textbf{C)} x = 1 y x = 8
+  \task \textbf{D)} x = 3 y x = -3
+\end{tasks}
+
+\vspace{0.4cm}
+
+\noindent \textbf{Ítem 2} (4 pts)\\
+La trayectoria de un proyectil lanzado verticalmente está modelada por la función $h(t) = -5t^2 + 20t$, donde $h$ es la altura en metros y $t$ el tiempo en segundos ($t \geq 0$). ¿En qué instante $t$ el proyectil alcanza su altura máxima?
+
+\begin{tasks}(2)
+  \task \textbf{A)} t = 2 segundos
+  \task \textbf{B)} t = 4 segundos
+  \task \textbf{C)} t = 20 segundos
+  \task \textbf{D)} t = 5 segundos
+\end{tasks}
+
+\vspace{0.4cm}
+
+\noindent \textbf{Ítem 3} (5 pts)\\
+Un estudiante afirma que 'si el discriminante $\Delta = b^2 - 4ac$ de una ecuación cuadrática es estrictamente negativo, la ecuación no tiene solución'. Demuestre o refute dicha afirmación especificando con rigor los conjuntos numéricos (conjunto $\mathbb{R}$ vs. $\mathbb{C}$) y su interpretación geométrica en el plano cartesiano.
+
+\vspace{0.2cm}
+\begin{tcolorbox}[colback=white,colframe=neutralGray,arc=1mm,boxrule=0.5pt,height=4.5cm,valign=top]
+{\footnotesize\color{gray}\textit{Espacio reservado para desarrollo y justificación axiomática}}
+\end{tcolorbox}
+
+\vspace{0.4cm}
+
+
+\end{document}

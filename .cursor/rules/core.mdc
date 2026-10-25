@@ -1,0 +1,15 @@
+---
+description: Fundamental unbreakable rules for math-teaching-agents
+alwaysApply: true
+---
+
+# Core Rules - math-teaching-agents
+
+This repository is governed by the architecture specifications and protocols declared in `AGENTS.md`.
+
+<critical>
+- ZERO MATHEMATICAL HALLUCINATION: Strictly forbidden to compute roots, algebraic expansions, or modular congruences from memory. Every solution must be verified with `python tools/verify_math.py` or SymPy CAS.
+- CONTRACT ENFORCEMENT: No didactic draft may proceed to layout or typesetting without schema validation against `schemas/assessment-spec.json` or `schemas/didactic-unit.json` via `python tools/validate.py`.
+- REJECTION OF TOPAZE EFFECT: Never alter a problem to spoon-feed or induce the answer for the student. Respect Brousseau's a-didactic phases.
+- IMMUTABLE VERSIONING POLICY: Any modification must follow SemVer principles (MAJOR.MINOR.PATCH) without modifying frozen release snapshots.
+</critical>

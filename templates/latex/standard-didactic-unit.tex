@@ -1,0 +1,59 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+\definecolor{primaryBlue}{RGB}{30, 64, 175}
+\definecolor{neutralGray}{RGB}{226, 232, 240}
+\definecolor{darkSlate}{RGB}{15, 23, 42}
+\definecolor{softBg}{RGB}{248, 250, 252}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small\textbf{DISEÑO CURRICULAR E INGENIERÍA DIDÁCTICA}}
+\lhead{\small \today}
+\cfoot{\small \thepage}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{\color{darkSlate} PLANIFICACIÓN DE UNIDAD DIDÁCTICA}}\\[0.2cm]
+  {\Large \textbf{\color{primaryBlue} <<UNIT_TITLE>>}}
+\end{center}
+
+\vspace{0.3cm}
+
+\noindent
+\begin{tabular}{|p{4.5cm}|p{3.5cm}|p{3.5cm}|p{4cm}|}
+\hline
+\textbf{Nivel Educativo} & \textbf{Sesiones} & \textbf{Duración / Sesión} & \textbf{Currículo} \\
+\hline
+<<TARGET_GRADE>> & <<ESTIMATED_SESSIONS>> sesiones & <<MINUTES_PER_SESSION>> min & <<CURRICULUM_REF>> \\
+\hline
+\end{tabular}
+
+\vspace{0.4cm}
+
+\begin{tcolorbox}[colback=softBg,colframe=neutralGray,arc=1mm,title=\textbf{\color{darkSlate}1. Marco Teórico y Articulación Metodológica}]
+\small
+\textbf{Marcos Activos:} <<ACTIVE_FRAMEWORKS>>\\[0.15cm]
+<<NETWORKING_JUSTIFICATION>>
+\end{tcolorbox}
+
+\vspace{0.3cm}
+
+\noindent \textbf{\large 2. Diagnóstico Cognitivo y Obstáculos Epistemológicos (MTSK)}\\[0.1cm]
+\small \textbf{Prerrequisitos Indispensables:} <<PREREQUISITES>>\\[0.2cm]
+<<MISCONCEPTIONS_BLOCK>>
+
+\vspace{0.4cm}
+
+\noindent \textbf{\large 3. Secuencia de Aprendizaje e Ingeniería de Situaciones}\\[0.2cm]
+<<PHASES_BLOCK>>
+
+\end{document}

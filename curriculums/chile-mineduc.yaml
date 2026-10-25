@@ -1,0 +1,55 @@
+id: "chile-mineduc"
+country_or_entity: "Chile - Ministerio de Educación (Mineduc) & DEMRE"
+language: "es-CL"
+version: "Bases Curriculares 7° Básico a 4° Medio / Actualización Priorización"
+
+thesaurus_mappings:
+  grade_levels:
+    "7_basico": "7° Básico"
+    "8_basico": "8° Básico"
+    "1_medio": "1° Medio"
+    "2_medio": "2° Medio"
+    "3_medio": "3° Medio (Formación General / Diferenciada)"
+    "4_medio": "4° Medio (Formación General / Diferenciada)"
+  mathematical_domains:
+    numbers: "Números"
+    algebra: "Álgebra y Funciones"
+    geometry: "Geometría"
+    statistics_probability: "Probabilidad y Estadística"
+
+curricular_units_nomenclature:
+  unit_keyword: "Objetivo de Aprendizaje (OA)"
+  indicator_keyword: "Indicador de Evaluación"
+  attitude_keyword: "Objetivos de Aprendizaje Transversales (OAT)"
+
+ministerial_skills:
+  - id: "RESOLVER_PROBLEMAS"
+    code: "RP"
+    name: "Resolver Problemas"
+  - id: "REPRESENTAR"
+    code: "REP"
+    name: "Representar"
+  - id: "MODELAR"
+    code: "MOD"
+    name: "Modelar"
+  - id: "ARGUMENTAR_COMUNICAR"
+    code: "ARG"
+    name: "Argumentar y Comunicar"
+
+standardized_testing:
+  active_tests:
+    - id: "PAES_M1"
+      name: "Prueba de Competencia Matemática 1 (Obligatoria M1)"
+      focus: "Habilidades transversales hasta 2° Medio, énfasis en resolución en contextos cotidianos."
+    - id: "PAES_M2"
+      name: "Prueba de Competencia Matemática 2 (Electiva M2)"
+      focus: "Profundización científica, cálculo formal y contenidos de 3° y 4° Medio."
+    - id: "SIMCE"
+      name: "Sistema de Medición de la Calidad de la Educación (SIMCE)"
+      levels: ["4° Básico", "8° Básico", "2° Medio"]
+
+assessment_scales:
+  standard_score_max: 7.0
+  standard_score_min: 1.0
+  passing_grade: 4.0
+  passing_grade_ratio: 0.60

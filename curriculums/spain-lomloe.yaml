@@ -1,0 +1,44 @@
+id: "spain-lomloe"
+country_or_entity: "España - Ministerio de Educación y Formación Profesional (LOMLOE)"
+language: "es-ES"
+version: "Real Decreto 217/2022 (ESO) y Real Decreto 243/2022 (Bachillerato)"
+
+thesaurus_mappings:
+  grade_levels:
+    "1_eso": "1º de Educación Secundaria Obligatoria"
+    "2_eso": "2º de Educación Secundaria Obligatoria"
+    "3_eso": "3º de Educación Secundaria Obligatoria"
+    "4_eso": "4º de Educación Secundaria Obligatoria (Matemáticas A / B)"
+    "1_bach": "1º de Bachillerato (Matemáticas I / Matemáticas Aplicadas a las CCSS I)"
+    "2_bach": "2º de Bachillerato (Matemáticas II / Matemáticas Aplicadas a las CCSS II)"
+  mathematical_domains:
+    numbers: "Sentido Numérico"
+    algebra: "Sentido Algebraico"
+    geometry: "Sentido Espacial"
+    statistics_probability: "Sentido Estocástico"
+    socioemotional: "Sentido Socioafectivo"
+
+curricular_units_nomenclature:
+  unit_keyword: "Competencia Específica"
+  content_keyword: "Saberes Básicos"
+  criteria_keyword: "Criterios de Evaluación"
+
+key_competencies_profile:
+  - id: "STEM"
+    name: "Competencia matemática y competencia en ciencia, tecnología e ingeniería"
+  - id: "CD"
+    name: "Competencia digital"
+  - id: "CPSAA"
+    name: "Competencia personal, social y de aprender a aprender"
+
+standardized_testing:
+  active_tests:
+    - id: "EBAU_PAU"
+      name: "Prueba de Acceso a la Universidad (PAU / EBAU)"
+      focus: "Madurez académica y competencias de Bachillerato."
+
+assessment_scales:
+  standard_score_max: 10.0
+  standard_score_min: 0.0
+  passing_grade: 5.0
+  passing_grade_ratio: 0.50

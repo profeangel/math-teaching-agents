@@ -1,0 +1,34 @@
+id: "brousseau-tsd"
+nombre: "Teoría de Situaciones Didácticas (TSD)"
+autor_principal: "Guy Brousseau (1997)"
+paradigma_epistemologico: "Constructivismo adaptativo y dialéctica del medio (milieu)"
+
+kflm_cognitive_model:
+  premisa_central: "El estudiante aprende mediante la adaptación activa a un medio didáctico antagonista que ofrece retroalimentación objetiva sin juicio directo del docente."
+  mecanismo_aprendizaje: "Ruptura del contrato didáctico y movilización de estrategias para superar desequilibrios."
+  foco_obstaculos:
+    - "Obstáculos didácticos provocados por transposiciones simplificadoras."
+    - "Obstáculos epistemológicos inherentes a la historia del concepto."
+
+kmt_instructional_design:
+  fases_obligatorias:
+    - fase: "Acción"
+      proposito: "El estudiante interactúa con el medio, toma decisiones y recibe retroalimentación inmediata del dispositivo o problema."
+    - fase: "Formulación"
+      proposito: "El estudiante explicita, codifica y comunica su estrategia a otros mediante lenguaje matemático o modelos."
+    - fase: "Validación"
+      proposito: "Los pares discuten, ponen a prueba y demuestran la universalidad de la afirmación mediante argumentos lógicos."
+    - fase: "Institucionalización"
+      proposito: "El docente retoma los descubrimientos del grupo y les confiere el estatus formal de conocimiento matemático oficial y universal."
+  reglas_de_tarea:
+    - "La situación debe ser a-didáctica en las fases de acción y formulación (el docente no debe intervenir sugiriendo la respuesta correcta)."
+    - "El saber matemático meta debe constituir la estrategia óptima de resolución para ganar o resolver el desafío."
+
+audit_checklist_gate_1:
+  - "Verificar que la consigna no entregue la fórmula o algoritmo de antemano."
+  - "Constatar que el medio devuelva sanciones objetivas (éxito o error visible) sin depender de la aprobación verbal del profesor."
+  - "Asegurar la presencia explícita de un momento formal de institucionalización al cierre."
+
+networking:
+  compatible_with: ["duval-trrs", "godino-eos"]
+  incompatible_with: ["instruccion_directa_pasiva", "memorizacion_descontextualizada"]

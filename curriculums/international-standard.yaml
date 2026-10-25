@@ -1,0 +1,39 @@
+id: "international-standard"
+country_or_entity: "International Mathematical Framework (NCTM / PISA / IB inspired)"
+language: "es"
+version: "2026.1"
+
+thesaurus_mappings:
+  grade_levels:
+    primary: "Educación Primaria / Elemental"
+    lower_secondary: "Educación Secundaria Inferior / Media Básica"
+    upper_secondary: "Educación Secundaria Superior / Preuniversitaria"
+  mathematical_domains:
+    numbers: "Números y Operaciones"
+    algebra: "Álgebra y Funciones"
+    geometry: "Geometría y Medida"
+    statistics_probability: "Estadística y Probabilidad"
+    calculus: "Cálculo y Análisis Matemático"
+
+mathematical_competencies:
+  - id: "PROBLEM_SOLVING"
+    name: "Resolución de Problemas"
+    description: "Diseño y aplicación de estrategias heurísticas en contextos intramatemáticos y extramatemáticos."
+  - id: "REASONING_AND_PROOF"
+    name: "Razonamiento y Demostración"
+    description: "Formulación de conjeturas, deducción lógica y justificación formal."
+  - id: "COMMUNICATION_REPRESENTATION"
+    name: "Comunicación y Representación"
+    description: "Traducción fluida entre múltiples registros semióticos y precisión en la terminología matemática."
+  - id: "MODELING"
+    name: "Modelización Matemática"
+    description: "Identificación de variables, formulación de ecuaciones o funciones y validación de predicciones frente al fenómeno real."
+
+assessment_scales:
+  standard_score_max: 100
+  passing_grade_ratio: 0.60
+  performance_bands:
+    - { name: "Sobresaliente", min_percentage: 90 }
+    - { name: "Notable / Avanzado", min_percentage: 75 }
+    - { name: "Aprobado / Suficiente", min_percentage: 60 }
+    - { name: "Insuficiente", min_percentage: 0 }
