@@ -18,6 +18,7 @@ sys.path.insert(0, str(TOOLS_DIR))
 import verify_math
 import validate
 import render
+import audit_pdf_layout
 
 
 @pytest.fixture
@@ -167,3 +168,43 @@ def test_render_cli_moodle(example_draft_path):
         assert out_file.exists()
         content = out_file.read_text(encoding="utf-8")
         assert "<quiz>" in content
+
+
+def test_audit_pdf_layout_pass():
+    pdf_clean = ROOT_DIR / "tests" / "fixtures" / "pdf" / "clean_twopage.pdf"
+    assert pdf_clean.exists(), "Missing fixture clean_twopage.pdf"
+    with patch.object(sys, "argv", ["audit_pdf_layout.py", str(pdf_clean), "--json"]):
+        try:
+            audit_pdf_layout.main()
+        except SystemExit as e:
+            assert e.code == 0
+
+
+def test_audit_pdf_layout_fail_latex_bleed_and_split():
+    pdf_split = ROOT_DIR / "tests" / "fixtures" / "pdf" / "split_item_latex_bleed.pdf"
+    assert pdf_split.exists(), "Missing fixture split_item_latex_bleed.pdf"
+    with patch.object(sys, "argv", ["audit_pdf_layout.py", str(pdf_split), "--json"]):
+        try:
+            audit_pdf_layout.main()
+        except SystemExit as e:
+            assert e.code == 1
+
+
+def test_audit_pdf_layout_orphan_overflow():
+    pdf_overflow = ROOT_DIR / "tests" / "fixtures" / "pdf" / "orphan_overflow.pdf"
+    assert pdf_overflow.exists(), "Missing fixture orphan_overflow.pdf"
+    with patch.object(sys, "argv", ["audit_pdf_layout.py", str(pdf_overflow), "--json"]):
+        try:
+            audit_pdf_layout.main()
+        except SystemExit as e:
+            assert e.code == 1
+
+
+def test_audit_pdf_layout_budget_exceeded():
+    pdf_clean = ROOT_DIR / "tests" / "fixtures" / "pdf" / "clean_twopage.pdf"
+    assert pdf_clean.exists(), "Missing fixture clean_twopage.pdf"
+    with patch.object(sys, "argv", ["audit_pdf_layout.py", str(pdf_clean), "--budget", "1", "--json"]):
+        try:
+            audit_pdf_layout.main()
+        except SystemExit as e:
+            assert e.code == 1

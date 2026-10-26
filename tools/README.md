@@ -95,6 +95,34 @@ python tools/render.py drafts/assessment.yaml --format typst --compile --json
 
 ---
 
+
+### D. `tools/audit_pdf_layout.py` (Visual PDF Layout Auditor - Gate 2)
+
+Inspects compiled binary PDFs via `pypdf` to prevent the "exit-code 0 fallacy":
+- Detects orphan overflows (< 20% character density on the final page).
+- Detects evaluation reactivos/items split across page breaks (e.g. options A/B on page 1 and C/D on page 2).
+- Detects orphan section headers severed at the page bottom.
+- Detects unparsed LaTeX syntax bleed in Typst (`\text{}`, `\circ`, `\frac{}`).
+- Enforces strict physical page budget (default: 2 pages / 1 physical sheet printed double-sided).
+
+```bash
+# Audit a compiled PDF:
+python tools/audit_pdf_layout.py output/assessment.pdf
+
+# Audit with custom physical page budget:
+python tools/audit_pdf_layout.py output/worksheet.pdf --budget 2
+
+# Structured JSON output for agent harnesses:
+python tools/audit_pdf_layout.py output/assessment.pdf --json
+```
+
+**Exit Codes:**
+* `0`: PASS. The PDF satisfies all physical layout and typography constraints.
+* `1`: FAIL. Layout violation detected (orphan overflow, split reactivo, LaTeX corruption, budget exceeded).
+* `2`: ERROR. File not found or corrupted PDF.
+
+---
+
 ## 3. Harness Integration Workflow
 
 In agent harness environments such as Claude Code or Antigravity, the `evaluator` subagent executes:
@@ -103,3 +131,4 @@ In agent harness environments such as Claude Code or Antigravity, the `evaluator
 
 If both tools exit with code `0`, the `universal-format-engine` subagent executes:
 3. `python tools/render.py <draft> --format typst --compile --json`
+4. `python tools/audit_pdf_layout.py <rendered_pdf> --json`

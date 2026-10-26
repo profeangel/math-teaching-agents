@@ -1,8 +1,8 @@
-version: "0.8.0"
-release_date: "2026-10-24"
-codename: "Synthesis"
+version: "0.8.1"
+release_date: "2026-10-26"
+codename: "Pedagogical Reality and Visual Layout Auditor"
 description: "Neural-Symbolic Multi-Agent Framework for Didactic Design, Formal Verification, and Mathematics Pedagogy"
-spec_version: "0.8.0"
+spec_version: "0.8.1"
 architecture:
   orchestration: "pedagogical-orchestrator"
   quality_gate_1: "Formal Deterministic Gate (SymPy CAS, Geometric & Probability Invariants, Draft 2020-12)"

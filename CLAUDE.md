@@ -1,4 +1,4 @@
-# CLAUDE.md - math-teaching-agents (v0.8.0)
+# CLAUDE.md - math-teaching-agents (v0.8.1)
 
 Operating guidelines for Claude Code, terminal AI assistants, and autonomous coding agents.
 The repository implements a neural-symbolic multi-agent suite for didactic design and mathematical assessment.
@@ -40,3 +40,5 @@ python tools/render.py drafts/my_assessment.yaml --format typst --compile --json
 4. **Duval Multi-Register Articulation**: Every problem situation or assessment item must articulate at least two semiotic registers (graphical/geometric, tabular, verbal/contextual, algebraic/symbolic).
 5. **Read-Only Adversarial Auditor**: The evaluator role (`math-auditor` / `zero-trust-evaluator`) must not modify files directly; it issues a structured `<audit_report>` for the creator to remediate (maximum 2 cycles before escalating to Human-in-the-Loop).
 6. **Immutable Versioning**: Any modification or evolution must follow the SemVer policy declared in `VERSIONS.md`.
+
+7. **Out-of-the-Box Classroom Intake**: On first interaction, always calibrate physical classroom materials (calculator yes/no, geometry tools or pre-printed cotas, exact radicals vs. decimals) and whether the lesson targets conceptual discovery or intensive deliberate practice.

@@ -257,7 +257,7 @@ The repository includes complete end-to-end production examples in [`examples/ec
 │   ├── ui.py                   # Embedded web dashboard
 │   ├── engines/                # Typesetting compilation engines (LaTeX, Typst, Moodle)
 │   └── validators/             # Schema validation, SymPy verifier, and pedagogical judge
-├── tests/                      # Comprehensive test suite (Pytest: 76 tests passing)
+├── tests/                      # Comprehensive test suite (Pytest: 80 tests passing)
 ├── schemas/                    # Universal data contracts (JSON Schema Draft 2020-12)
 │   ├── assessment-spec.json    # Universal schema for assessments
 │   └── didactic-unit.json      # Universal schema for lesson units

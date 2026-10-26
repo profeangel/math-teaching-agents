@@ -137,6 +137,11 @@ def inject_profile_into_prompt(profile: Optional[Dict[str, Any]], system_prompt:
             "ontosemióticas de Godino y la conversión de registros de Duval."
         )
 
+        instructions.append(
+        "- MANDATORY OUT-OF-THE-BOX CLASSROOM INTAKE: On initial interactions, proactively calibrate "
+        "classroom materials (calculator policy, geometry tools vs. pre-printed cotas, exact radicals vs. decimals) "
+        "and pedagogical purpose (conceptual inquiry vs. intensive deliberate practice / procedural fluency)."
+    )
     return system_prompt + "\n".join(instructions)
 
 

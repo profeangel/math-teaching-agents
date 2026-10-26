@@ -5,6 +5,36 @@ El formato se basa en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/
 
 ---
 
+## [0.8.1] - 2026-10-26 (Pedagogical Reality and Visual Layout Auditor)
+
+### Added
+- **Visual & Layout Auditor Tool (`tools/audit_pdf_layout.py`)**:
+  - Deterministic CLI tool for Gate 2 layout verification using `pypdf`.
+  - Detection of orphan overflows on final pages (< 20% character density ratio).
+  - Detection of unparsed LaTeX syntax bleed in Typst (`\text{}`, `\circ`, `\frac{}`).
+  - Detection of evaluation reactivos/items split across page breaks.
+  - Page budget enforcement (`--budget`, `--draft`, `--json`).
+  - Comprehensive unit test suite in `tests/test_tools.py` with standalone PDF fixtures in `tests/fixtures/pdf/`.
+- **Lesson Study Problem-Solving Framework (`frameworks/isoda-olfos-resolucion-problemas.yaml`)**:
+  - Canonical 5-moment mathematics lesson model (Nohda & Shimada / Isoda & Olfos 2009):
+    1. Review / Warm-up (*Fukushuu*).
+    2. Problem Posing (*Hatsumon*).
+    3. Independent / Group Solving (*Kikan-shido*).
+    4. Comparison & Discussion (*Neriage*).
+    5. Summary & Institutionalization (*Matome*).
+
+### Changed
+- **Orchestrator Out-of-the-Box Classroom Intake (`AGENTS.md`, `agents/orchestrator.md`, `CLAUDE.md`, `.cursor/rules/`)**:
+  - Proactive classroom constraints interview: calculator policy (forbidden/allowed), geometry tools vs. pre-printed cotas, exact radicals vs. decimal approximations.
+  - Didactic balance: recognizes that not every lesson is an abstract inquiry session; incorporates dedicated intensive deliberate practice and procedural fluency workshops.
+- **Anti-Token Waste & Lazy Answer Key Policy**:
+  - Eliminates unnecessary dual generation of student vs. teacher worksheets.
+  - The core material is designed 100% for student autonomous work (UDL/DUA accessible).
+  - Teachers receive a 1-page executive Lesson Roadmap (5 moments).
+  - Answer keys (solucionarios) are generated lazily on-demand only after the student document is frozen and approved in Gate 2.
+
+---
+
 ## [0.8.0] - 2026-10-24
 
 ### Añadido (The Synthesis Release: Fusión v0.1.0 + v0.7.0 & Guía de Agentes)

@@ -1,0 +1,45 @@
+id: "isoda-olfos-resolucion-problemas"
+nombre: "Enfoque de Resolución de Problemas (Problem Solving) y Estudio de Clases"
+autor_principal: "Nobuhiko Nohda & Shigeru Shimada (1997); Masami Isoda & Raimundo Olfos (2009)"
+paradigma_epistemologico: "Constructivismo colaborativo, enfoque de problemas abiertos (Open-ended Approach) y matematización compartida en aula (Lesson Study japonés)"
+
+kflm_cognitive_model:
+  premisa_central: "El aprendizaje surge cuando el estudiante se enfrenta a una situación problemática auténtica sin un procedimiento predeterminado, moviliza ideas previas y aprende a través de la comparación dialéctica de distintas estrategias de resolución entre pares."
+  mecanismo_aprendizaje: "Divergencia heurística inicial (múltiples aproximaciones) seguida de convergencia discursiva (Neriage) hacia métodos matemáticos más eficientes, generales y elegantes."
+  foco_obstaculos:
+    - "Dificultad para comprender la consigna sin que el docente modele la respuesta."
+    - "Resistencia a compartir estrategias intuitivas o no formales por temor al error."
+    - "Incapacidad de conectar la solución propia con la síntesis matemática formal de cierre."
+
+kmt_instructional_design:
+  fases_obligatorias:
+    - fase: "1. Activación de conocimientos previos"
+      japones_ref: "Fukushuu"
+      proposito: "Recuperación ágil, situada y motivante de nociones o habilidades indispensables para abordar el reto del día, sin anticipar la solución del problema central."
+      ejemplo_crucial: "Pregunta relámpago, contraste conceptual o ejercicio detonante de 5 minutos."
+    - fase: "2. Presentación del problema"
+      japones_ref: "Hatsumon"
+      proposito: "Planteamiento claro y motivador de una situación desafiante y abierta. El docente asegura que todos comprenden el objetivo de la tarea sin entregar pistas metodológicas."
+      ejemplo_crucial: "Consigna escrita en pizarra con cotas exactas, asegurando la formulación con palabras propias del estudiante."
+    - fase: "3. Desarrollo del problema (Resolución independiente / grupal)"
+      japones_ref: "Kikan-shido"
+      proposito: "Espacio de trabajo activo y autónomo de los estudiantes. El docente realiza monitoreo reflexivo entre bancos: observa, toma notas y clasifica estrategias sin validar prematuramente."
+      ejemplo_crucial: "Intervenciones mediadoras mínimas ('¿Qué datos tienes?', '¿Cómo podrías representarlo?') y selección de 2 o 3 métodos diversos para la puesta en común."
+    - fase: "4. Exposición y discusión de las respuestas (Puesta en común)"
+      japones_ref: "Neriage"
+      proposito: "Orquestación intencionada de las soluciones de los estudiantes en la pizarra (de la intuitiva/gráfica a la formal/algebraica). Comparación dialéctica: similitudes, diferencias y eficiencia."
+      ejemplo_crucial: "Pregunta de contraste: '¿En qué se diferencian el método de A y el método de B? ¿Cuál nos permite resolver cualquier caso similar?'."
+    - fase: "5. Institucionalización y Síntesis"
+      japones_ref: "Matome"
+      proposito: "Cierre formal de la clase conducido por el docente. Se conecta el descubrimiento colectivo de los estudiantes con el lenguaje formal, teorema o definición canónica, registrándolo en el cuaderno."
+      ejemplo_crucial: "Recuadro de síntesis oficial del concepto o propiedad con vocabulario matemático preciso y evaluación breve de salida (Ticket de salida)."
+
+audit_checklist_gate_1:
+  - "Verificar que la planificación o guía docente desglose con claridad los 5 momentos de la sesión."
+  - "Asegurar que la fase de desarrollo (Kikan-shido) contemple la anticipación explícita de estrategias de los estudiantes (incluyendo errores fértiles)."
+  - "Constatar que la discusión (Neriage) incluya preguntas concretas de contraste pedagógico y no sea un simple desfile pasivo de respuestas."
+  - "Validar que la institucionalización (Matome) cierre formalmente la propiedad matemática en lenguaje canónico."
+
+networking:
+  compatible_with: ["brousseau-tsd", "duval-trrs", "godino-eos", "dubinsky-apoe"]
+  incompatible_with: ["instruccion_directa_pasiva", "drill_and_kill_mecanico"]

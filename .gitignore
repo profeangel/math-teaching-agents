@@ -95,3 +95,7 @@ dist_output/
 # Ignore PDFs generated at root or temporary dirs (preserve examples)
 *.pdf
 !examples/**/*.pdf
+!tests/fixtures/**/*.pdf
+!tests/fixtures/pdf/*.pdf
+
+handoff.md

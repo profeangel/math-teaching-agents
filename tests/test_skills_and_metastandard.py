@@ -43,6 +43,7 @@ def test_all_frameworks_present():
     assert (fw_dir / "dubinsky-apoe.yaml").exists()
     assert (fw_dir / "duval-trrs.yaml").exists()
     assert (fw_dir / "godino-eos.yaml").exists()
+    assert (fw_dir / "isoda-olfos-resolucion-problemas.yaml").exists()
 
 def test_all_curriculums_present():
     curr_dir = ROOT / "curriculums"
