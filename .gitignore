@@ -1,3 +1,9 @@
+# Windows / Cloud Drive
+desktop.ini
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+
 # Python
 __pycache__/
 *.py[cod]
